@@ -1,50 +1,94 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+        <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/solarized.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+        <!-- Printing and PDF exports -->
+        <script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+                    <section data-markdown>
+                        <script type="text/template">
+## I'm going to make a presentation with reveal.js
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+... and I'm going to make GitHub host it
+                        </script>
+                    </section>
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+                    <section>
+                        <h3><code class="bash">/me</code></h3>
+                        <h4>Yung-Jin (Joey) Hu</h4>
+                        <p>
+                        <pre><code class="bash">$ whoami
+yhu</code></pre>
+                        <ul>
+                            <li>Ph.D. in Physical Nuclear Chemistry</li>
+                            <li>Write software for a living</li>
+                        </ul>
+                        </p>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### Presentation software I've tried
+
+- Printing physical overhead slides
+- Google Slides
+- Microsoft Powerpoint
+- LibreOffice Impress
+- LaTeX/Beamer
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### Things I don't like about presentation software
+
+- Designing slides
+- Writing LaTeX
+- Exporting to different formats
+                        </script>
+                    </section>
+
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+// More info https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    history: true,
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+    { src: 'plugin/markdown/marked.js' },
+    { src: 'plugin/markdown/markdown.js' },
+    { src: 'plugin/notes/notes.js', async: true },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+});
+        </script>
+    </body>
 </html>
