@@ -68,6 +68,105 @@ yhu</code></pre>
 - Exporting to different formats
                         </script>
                     </section>
+                </section>
+
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+### Clone reveal.js
+
+Start by cloning the `reveal.js` project from GitHub
+
+```
+git clone https://github.com/hakimel/reveal.js.git \
+    intro-to-reveal-js
+```
+
+Give it a meaningful name like `intro-to-reveal-js`
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### Rename `origin` remote to `upstream`
+
+```
+git remote rename origin upstream
+git branch --set-upstream-to=upstream/master master
+```
+
+Just some housekeeping so that in the future we can update reveal.js by doing a
+pull on `upstream/master`
+
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### Set `origin` to a new repo under our name
+
+... and push a new branch named `gh-pages` to it
+
+```
+git remote add origin \
+    git@github.com:TheGhostHuCodes/intro-to-reveal-js.git
+git checkout -b gh-pages
+git push --set-upstream origin gh-pages
+```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### ???, Profit!
+
+The magic branch name `gh-pages` tells GitHub to publish the contents on that
+branch to the internet at a url that mashes together our user and repo name
+
+For this repo the page is published at
+[https://theghosthucodes.github.io/intro-to-reveal-js/](https://theghosthucodes.github.io/intro-to-reveal-js/)
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### More `origin` repo cleanup
+
+GitHub will automatically set the `Default branch` of a repo to
+`origin/master`
+
+Lets set the repo `Default branch` to be `gh-pages`.
+
+![](./images/set-default-branch-to-gh-pages.png)
+
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### More `origin` repo cleanup II
+
+Then delete the `origin/master` branch so we don't confuse it with
+`upstream/master`
+
+```
+git push --delete origin master
+```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### The story so far...
+
+- Cloned the `reveal.js` repo and renamed its remote to `upstream`
+- Pushed it to a repo with the name of our presentation whos remote is `origin`
+- `master` points to `upstream/master`
+- `gh-pages` points to `origin/gh-pages`
+- Our presentation is published to the internet
+
+                        </script>
+                    </section>
 
                 </section>
             </div>
