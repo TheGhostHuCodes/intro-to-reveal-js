@@ -196,6 +196,46 @@ I'll be here when you get back
                     </section>
 
                 </section>
+
+                <section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### Your presentation is done!
+
+But now Reveal.js has been updated and you want the coolest new features :(
+
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### Update get the latest from `upstream/master`
+
+```
+git fetch upstream --prune
+git checkout master
+git pull
+```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### Rebase `origin/gh-pages` on top of `upstream/master`
+
+```
+git checkout gh-pages
+git rebase master
+
+<resolve merge conflicts here if applicable>
+
+git push -f origin gh-pages
+```
+                        </script>
+                    </section>
+
+                </section>
             </div>
         </div>
 
